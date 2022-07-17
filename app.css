@@ -1,0 +1,36 @@
+#game .card {
+    border: 1px solid black;
+    width: 15%;
+    height: 200px;
+    margin: 10px;
+    display: inline-block;
+  } 
+  
+  #game .card .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  #game .card .card-inner .front , #game .card .card-inner .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  #game .card.flipit .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  #game .card .card-inner .front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  #game .card .card-inner .back {
+    transform: rotateY(180deg);
+  }
